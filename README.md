@@ -13,7 +13,7 @@
 - Label: "Value" - no. of students in that section.
 
 
-##Enrolments of Full-Time Students by Level of Education and Year
+###Enrolments of Full-Time Students by Level of Education and Year
 ##October 19/2015
 ###Niks Gurins G00315379
 
