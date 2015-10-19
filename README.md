@@ -1,7 +1,7 @@
 ##Project for Data Representation and Querying 2015
 
-**http://www.cso.ie/webserviceclient/JSON-stattotable.aspx?tableid=EDA37** PDF
-**http://www.cso.ie/StatbankServices/StatbankServices.svc/jsonservice/responseinstance/EDA37** JSON
+**[PDF](http://www.cso.ie/webserviceclient/JSON-stattotable.aspx?tableid=EDA37)**
+**[JSON](http://www.cso.ie/StatbankServices/StatbankServices.svc/jsonservice/responseinstance/EDA37)**
 
 
 
