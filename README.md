@@ -1,6 +1,7 @@
 ##Project for Data Representation and Querying 2015
 
-**http://www.cso.ie/webserviceclient/JSON-stattotable.aspx?tableid=EDA37**
+**http://www.cso.ie/webserviceclient/JSON-stattotable.aspx?tableid=EDA37** PDF
+**http://www.cso.ie/StatbankServices/StatbankServices.svc/jsonservice/responseinstance/EDA37** JSON
 
 
 
@@ -15,5 +16,7 @@
 #Enrolments of Full-Time Students by Level of Education and Year
 ##October 19/2015
 ###Niks Gurins G00315379
+
+
 
 
