@@ -17,6 +17,14 @@
 ##October 19/2015
 ###Niks Gurins G00315379
 
+```c
+int i;
+for(i = 0; i < 10; i++)
+{
+  printf("well  %d", i);
+}
+```
+
 
 
 
