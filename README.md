@@ -5,9 +5,8 @@ This is an API created for the request from Apps4gaps, using their dataset regar
 - **[PDF](http://www.cso.ie/webserviceclient/JSON-stattotable.aspx?tableid=EDA37)**
 - **[JSON](http://www.cso.ie/StatbankServices/StatbankServices.svc/jsonservice/responseinstance/EDA37)**
 
-___
-### Data
 
+### Data
 The dataset is divided into four columns; Level of Education, Year, Statistic and Value. Let's take a look at 5 random rows from the dataset:
 
 Level of Education | Year | Statistic | Value
@@ -19,11 +18,18 @@ Third level | 2004 | Enrolments of Full-Time Students (No.) | 133887
 Post leaving certificate courses (VPT2) | 2000 | Enrolments of Full-Time Students (No.) | 24337
 
 
-The first row of the dataset is a header row with the names for each field. Analysis of the random rows shows that **Level of Education** does what it says, states whether the data is about First level education, Second, Third, Post leaving-cert or All levels together (total). The **Year** column shows what year the data is talking about. **Statistic** is more of a filler column, making the dataset more easily readable and finally the **Value** column regards how many students were enroled in the specific level of education that year.
+The first row of the dataset is a *header row* with the names for each field. Analysis of the other rows shows that
 
-___
+1. **Level of Education** states whether the data concerns the sudents in First level education, Second, Third, Post leaving-cert or All levels together (total).
+
+1. **Year** shows what year the data is talking about. 
+
+1. **Statistic** is more of a filler column, making the dataset more easily readable and finally the 
+
+1. **Value** column regards how many students were enrolled in the specific level of education that year.
+
+
 ### Design
-
 The aim of this API is to provide efficent access of the data provided by the dataset. This will be achieved by a number of carefully thought out *URLs* that allow any part of the data to be accessed. In the JSON file of the dataset, it is visible that all the levels of education and years have unique indexes to uniquely identify every piece of data.
 
 
