@@ -44,7 +44,7 @@ The levels of education are indexed as follows:
 ####*GET method* - requests data from a dataset using specific URLs
 A URL to return a list of all years and their values for a particular level of education would look like this [https://educationapi.com/level/[level]]()
 
-This URL in use would look like this: [https://educationapi.com/level/-]() and would return every year of students enrolled for a specific level of education together.
+e.g. [https://educationapi.com/level/-]() and would return every year of students enrolled for a specific level of education together.
 
 The actual JSON response for this would be
 ```json
@@ -57,7 +57,7 @@ The actual JSON response for this would be
 
 A URL to return a list of all different education levels for a particular year and their values [https://educationapi.com/year/[year]]()
 
-This URL in use would look like this: [https://educationapi.com/year/1966]() and would return every level of education students have enrolled for the selected year.
+e.g. [https://educationapi.com/year/1966]() and would return every level of education students have enrolled for the selected year.
 
 JSON returned from this URL would looke like this
 ```json
@@ -72,7 +72,7 @@ JSON returned from this URL would looke like this
 The URL to get a a single row returned from the entire dataset would have to be:
 [https://educationapi.com/level/[level]/year/[year]](). Using this kind of URL would be very useful for accessing very specific information.
 
-The URL would look like this: [https://educationapi.com/level/23/year/2015]() 
+e.g. [https://educationapi.com/level/23/year/2015]() 
 
 The JSON returned from this URL would be 
 ```json
