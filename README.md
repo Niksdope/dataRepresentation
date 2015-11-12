@@ -41,12 +41,15 @@ The levels of education are indexed as follows:
 - **" X45 "** denotes Post leaving certificate courses (VPT2)
 
 
-####*GET method* - requests data from a dataset using specific URLs
+####*GET request* - retrieves data from a web server by specifying parameters in the URL portion of the request
 A URL to return a list of all years and their values for a particular level of education would look like this [https://educationapi.com/level/[level]]()
 
 e.g. [https://educationapi.com/level/-]() and would return every year of students enrolled for all levels of education together.
 
-The actual JSON response for this would be
+* The data returned will be in JSON format and will include
+  - "id":  for the level of education being returned
+  - "year": for every year 1966-2015 specific to the education level specified
+  - "value": for each value specific to each year
 ```json
 {
   "id" : "-",
@@ -59,7 +62,10 @@ A URL to return a list of all different education levels for a particular year a
 
 e.g. [https://educationapi.com/year/1966]() would return every level of education students have enrolled for 1966.
 
-JSON returned from this URL would looke like this
+* The data returned will be in JSON format and will include
+  - "year": for the specific year in the url
+  - "id": for all different levels of education
+  - "value": for every value for the speified year under every education level
 ```json
 {
   "year" : 1966,
@@ -74,7 +80,10 @@ The URL to get a a single row returned from the entire dataset would have to be:
 
 e.g. [https://educationapi.com/level/23/year/2015]() 
 
-The JSON returned from this URL would be 
+* The data returned will be in JSON format and will include
+  - "id":  for the level of education specified
+  - "year": for the year specified
+  - "value": for the specified level of education and year
 ```json
 {
   "id" : "23",
@@ -83,9 +92,7 @@ The JSON returned from this URL would be
 }
 ```
 
-####*POST method* - submits data to be processed to the dataset using a URL
-
-
+####*POST request* - used when you want to send some data to the server, for example, file update, form data, etc.
 The *Post* method sends a request to the server to update or add new values to the dataset.
 An example post request to the server would look like this.
 ```http
@@ -99,3 +106,6 @@ Host: json.educationapi.com
 {"id":"X45", "year":"1966", "value":"18372"}
 ```
 This request will update the null value for Post-Leavingcert course enrollment for year 1966 to 18372, and will return JSON to show the update has worked.
+
+
+####*DELETE request* - used to request the server to delete a file at a location specified by the given URL
