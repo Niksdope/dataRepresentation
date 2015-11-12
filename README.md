@@ -141,11 +141,11 @@ function compare() {
 
 ### The Future
 In the future the API will have many newer versions each with added functionality 
-1. The API could make use of more http methods such as DELETE and PUT to further update the data on the server
+1. The API could make use of more http methods such as *DELETE* and *PUT* to further update the data on the server
 2. Add a more refined look to the html to display the responses sent from the server
 3. Make querying the dataset much easier by making a web page to query it for you in the background and all the users would have to do is input data like education level or year into their designated fields
 4. Add more functions for the use of economists to make sense of the data with more ease
 
 
 ### Summary
-This API was designed for Apps4gaps to provide simple and efficent access to their dataset concerning "Enrolments of Full-Time Students by Level of Education and Year". I hope that the dataset will be of use to not only Apps4gaps but also any user that might want to query the Irish dataset for enrolled students through out the years since 1966.
+This API was designed for Apps4gaps to provide simple and efficent access to their dataset concerning "**Enrolments of Full-Time Students by Level of Education and Year**". *I hope that the dataset will be of use to not only Apps4gaps but also any user that might want to query the Irish dataset for enrolled students through out the years since 1966.* Thanks for reading.
