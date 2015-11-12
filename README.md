@@ -34,27 +34,29 @@ The aim of this API is to provide efficent access of the data provided by the da
 
 
 The levels of education are indexed as follows:
-- " - " denotes All levels of education
-- " 104 " denotes First level
-- " 23 " denotes Second level
-- " 4 " denotes Third level
-- " X45 " denotes Post leaving certificate courses (VPT2)
+- **" - "** denotes All levels of education
+- **" 104 "** denotes First level
+- **" 23 "** denotes Second level
+- **" 4 "** denotes Third level
+- **" X45 "** denotes Post leaving certificate courses (VPT2)
 
 
-####GET method - requests data from a specified resource using different URLs
+####*GET method* - requests data from a dataset using specific URLs
 A URL to return a list of all years and their values for a particular level of education would look like this [https://educationapi.com/level/[level]]()
+
 This URL in use would look like this: [https://educationapi.com/level/-]() and would return every year of students enrolled for a specific level of education together.
 
 The actual JSON response for this would be
 ```json
 {
   "id" : "-",
-  "year" : ["1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978"...]
-  "value": ["638298","652844","670382","692860","712928","732214","750979","768789","786541","803503","828019","848025"...]
+  "year" : ["1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978"...],
+  "value" : ["638298","652844","670382","692860","712928","732214","750979","768789","786541","803503","828019","848025"...]
 ```
 
 
 A URL to return a list of all different education levels for a particular year and their values [https://educationapi.com/year/[year]]()
+
 This URL in use would look like this: [https://educationapi.com/year/1966]() and would return every level of education students have enrolled for the selected year.
 
 JSON returned from this URL would looke like this
@@ -68,9 +70,9 @@ JSON returned from this URL would looke like this
 
 
 The URL to get a a single row returned from the entire dataset would have to be:
-[https://educationapi.com/level/[level]/year/[year]]()
-Using this kind of URL would be very useful for accessing very specific information. The URL would look like this:
-[https://educationapi.com/level/23/year/2015]() 
+[https://educationapi.com/level/[level]/year/[year]](). Using this kind of URL would be very useful for accessing very specific information.
+
+The URL would look like this: [https://educationapi.com/level/23/year/2015]() 
 
 The JSON returned from this URL would be 
 ```json
@@ -81,4 +83,4 @@ The JSON returned from this URL would be
 }
 ```
 
-####Put method
+####*POST method* - submits data to be processed to the dataset using a URL
