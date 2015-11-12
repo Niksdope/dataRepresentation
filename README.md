@@ -30,7 +30,7 @@ The first row of the dataset is a *header row* with the names for each field. An
 
 
 ### Design
-The aim of this API is to provide efficent access of the data provided by the dataset. This will be achieved by a number of carefully thought out *URLs* that allow any part of the data to be accessed. In the JSON file of the dataset, it is visible that all the levels of education and years have unique indexes to uniquely identify every piece of data.
+The aim of this API is to provide efficent access of the data provided by the dataset. This will be achieved by a number of carefully thought out *URLs* that allow any part of the data to be accessed. I imagine the the dataset being used mostly by economists so access to every single piece of data is key. As an economist you might also want useful functions to be used on the data and so JS functions will also be written to refine the data. In the JSON file of the dataset, it is visible that all the levels of education and years have unique indexes to uniquely identify every piece of data.
 
 
 The levels of education are indexed as follows:
@@ -92,6 +92,7 @@ e.g. [https://educationapi.com/level/23/year/2015]()
 }
 ```
 
+
 ####*POST request* - used when you want to send some data to the server, for example, file update, form data, etc.
 The *Post* method sends a request to the server to update or add new values to the dataset.
 An example post request to the server would look like this.
@@ -108,4 +109,43 @@ Host: json.educationapi.com
 This request will update the null value for Post-Leavingcert course enrollment for year 1966 to 18372, and will return JSON to show the update has worked.
 
 
-####*DELETE request* - used to request the server to delete a file at a location specified by the given URL
+####*JS functions* - used to further refine data returned from a dataset. (inside the HTML file)
+The API I'm creating will have JS methods for the users, which will do the following:
+* Printing the JSON objects returned in a easy to read format (print.pretty)
+* Calculating the difference in students enrolling into a specific education level from one year to another
+* Use D3.js to draw graphs to represent the data in the dataset
+
+The function to compare the years would just be a combo box for all different education levels, two textboxes in the html file with a button called compare and the function would be an event listener to check if the button has been clicked.
+
+It will then use change all the values entered into JSON, find the *"value"* for both years and take the one with a higher year away from the one with a lower year.
+
+```js
+document.getElementById("compareBtn").addEventListener("click", compare);
+
+function compare() {
+  // get the json variable and put them into local variables
+  var difference = 0;
+  if(year1 > year2)
+  {
+    difference = year1-year2;
+  }
+  else if (year2 > year1)
+  {
+    difference = year2-year1;
+  }
+  
+  document.getElementById("pForResult").innerHTML = difference;
+}
+```
+
+
+### The Future
+In the future the API will have many newer versions each with added functionality 
+1. The API could make use of more http methods such as DELETE and PUT to further update the data on the server
+2. Add a more refined look to the html to display the responses sent from the server
+3. Make querying the dataset much easier by making a web page to query it for you in the background and all the users would have to do is input data like education level or year into their designated fields
+4. Add more functions for the use of economists to make sense of the data with more ease
+
+
+### Summary
+This API was designed for Apps4gaps to provide simple and efficent access to their dataset concerning "Enrolments of Full-Time Students by Level of Education and Year". I hope that the dataset will be of use to not only Apps4gaps but also any user that might want to query the Irish dataset for enrolled students through out the years since 1966.
