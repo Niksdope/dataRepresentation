@@ -44,7 +44,7 @@ The levels of education are indexed as follows:
 ####*GET method* - requests data from a dataset using specific URLs
 A URL to return a list of all years and their values for a particular level of education would look like this [https://educationapi.com/level/[level]]()
 
-e.g. [https://educationapi.com/level/-]() and would return every year of students enrolled for a specific level of education together.
+e.g. [https://educationapi.com/level/-]() and would return every year of students enrolled for all levels of education together.
 
 The actual JSON response for this would be
 ```json
@@ -57,7 +57,7 @@ The actual JSON response for this would be
 
 A URL to return a list of all different education levels for a particular year and their values [https://educationapi.com/year/[year]]()
 
-e.g. [https://educationapi.com/year/1966]() and would return every level of education students have enrolled for the selected year.
+e.g. [https://educationapi.com/year/1966]() would return every level of education students have enrolled for 1966.
 
 JSON returned from this URL would looke like this
 ```json
@@ -84,3 +84,18 @@ The JSON returned from this URL would be
 ```
 
 ####*POST method* - submits data to be processed to the dataset using a URL
+
+
+The *Post* method sends a request to the server to update or add new values to the dataset.
+An example post request to the server would look like this.
+```http
+POST /request HTTP/1.1
+Accept: application/jsonrequest
+Content-Encoding: identity
+Content-Length: 28
+Content-Type: application/jsonrequest
+Host: json.educationapi.com
+
+{"id":"X45", "year":"1966", "value":"18372"}
+```
+This request will update the null value for Post-Leavingcert course enrollment for year 1966 to 18372, and will return JSON to show the update has worked.
